@@ -202,7 +202,7 @@ a:hover {
   position: absolute;
   bottom: 0;
   width: 100%;
-  transform: translateY(68%);
+  transform: translateY(60%);
   transition: transform 350ms ease;
   padding: 3rem;
 }
@@ -245,9 +245,29 @@ a:hover {
 .previous-day {
   opacity: 0;
 }
+.previous-day > * {
+  margin: 0;
+}
+.previous-day__date {
+  font-size: 0.9rem;
+  color: var(--clr-gray);
+}
+.previous-day__more-info {
+  cursor: pointer;
+  border: 0;
+  border-radius: 100vmax;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-transform: uppercase;
+  padding: 0.3em 1em;
+  margin-top: 1em;
+}
+.previous-day__more-info:hover {
+  background: var(--clr-gray);
+}
 
 .show-weather.previous-weather {
-  transform: translateY(5%);
+  transform: translateY(0);
 }
 .show-weather.previous-weather .show-previous-weather ~ span {
   display: block;
