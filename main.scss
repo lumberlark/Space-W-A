@@ -37,11 +37,11 @@
     line-height: 1.6;
     background-image: url(images/mars.jpg);
     background-size: cover;
-    background-size: cover;
     height: 100vh;
     overflow: hidden;
     color: var(--clr-light);
-   
+    background-position: center;
+    background-repeat:no-repeat;
 } 
 
 h1, h2, h3 { line-height: 1; }
@@ -82,14 +82,32 @@ a{
 }
 
 .mars-current-weather{
-  background: rgba(0,0,0,.7);
+  background: rgba(0,0,0,.8);
   padding: 2em;
-  max-width: 1000px;
-  margin: 4em 0 0 4em;
+  max-width: 45%;
+  margin: 12em 0 0 34em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2em;
 }
+
+.mars-current-weather{
+@media (max-width: 768px) {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+  color: yellow;
+  position: absolute;
+  width: fit-content;
+  margin: auto;
+  height:fit-content;
+}
+
+.info{
+  display: none;
+}
+
+}
+
 .date{
   grid-column: 1 / 2;
 
@@ -137,7 +155,7 @@ a{
       /*update custom props within JS to
        update the direction*/
 
-       --direction: 180deg;
+       --direction: 45deg;
        --size: 1rem;
        /* using custom props allows for calc to be used & updating size is easy*/
        height: calc(var(--size) * 3);
@@ -343,3 +361,5 @@ a{
     transform: translateY(0);
   }
 }
+
+
