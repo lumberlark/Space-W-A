@@ -16,14 +16,14 @@
   --clr-light: #fff;
   --clr-gray: #989898;
   --clr-dark: #444;
-  --clr-accent: #D06D6D;
+  --clr-accent: #d06d6d;
   --clr-accent-dark: #613131;
 }
 
 .sr-only:not(:focus):not(:active) {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -44,7 +44,29 @@ body {
   background-repeat: no-repeat;
 }
 
-h1, h2, h3 {
+#goBack {
+  width: 6%;
+  height: 5%;
+  margin-top: 1%;
+  margin-left: 1%;
+  border: 4px double white;
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  transition: 0.2s ease-in-out;
+}
+
+#goBack:hover {
+  width: 7%;
+  height: 6%;
+  background-color: white;
+  color: black;
+}
+
+h1,
+h2,
+h3 {
   line-height: 1;
 }
 
@@ -118,7 +140,7 @@ a:hover {
 }
 
 .temp {
-  --border: solid .25em var(--clr-accent-dark);
+  --border: solid 0.25em var(--clr-accent-dark);
   grid-column: 2/3;
   border-left: var(--border);
   border-right: var(--border);
@@ -144,7 +166,7 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.5);
   display: grid;
   place-items: center;
-  grid-row: 1/span 2;
+  grid-row: 1 / span 2;
 }
 .wind__arrow {
   /*update custom props within JS to
@@ -157,7 +179,7 @@ a:hover {
   background: var(--clr-accent-dark);
   /* changes arrow element into a triangle*/
   -webkit-clip-path: polygon(50% 0, 0% 100%, 100% 100%);
-          clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0, 0% 100%, 100% 100%);
   transform: translateY(-25%);
   rotate: var(--direction);
   transition: transform 500ms ease;
@@ -184,7 +206,7 @@ a:hover {
 .unit input {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -235,14 +257,15 @@ a:hover {
   font-size: var(--fs-h2);
   line-height: 1;
   -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
-          clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
   cursor: pointer;
   color: var(--clr-gray);
   border: 0;
   font-family: inherit;
   border-bottom: 1px solid var(--clr-light);
 }
-.show-previous-weather:hover, .show-previous-weather:focus {
+.show-previous-weather:hover,
+.show-previous-weather:focus {
   color: var(--clr-dark);
 }
 .show-previous-weather span {
@@ -291,7 +314,8 @@ a:hover {
   display: block;
   transform: rotate(180deg) translateY(-6px);
 }
-.show-weather.previous-weather .previous-weather__title, .show-weather.previous-weather .previous-day {
+.show-weather.previous-weather .previous-weather__title,
+.show-weather.previous-weather .previous-day {
   opacity: 1;
   animation: slideUpIn 750ms forwards;
 }
@@ -336,4 +360,4 @@ a:hover {
     opacity: 1;
     transform: translateY(0);
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
